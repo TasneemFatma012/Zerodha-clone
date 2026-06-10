@@ -22,7 +22,7 @@ function NavBar() {
           to="/"
         >
           <img
-            src="media/logo.svg"
+            src="/media/logo.svg"
             alt="logo"
             style={{
               width: "38px",
@@ -65,7 +65,7 @@ function NavBar() {
             
             {/* MENU ITEMS */}
             {[
-              
+              { name: "Signup", path: "/signup" },
               { name: "About", path: "/about" },
               { name: "Products", path: "/products" },
               { name: "Pricing", path: "/pricing" },

@@ -26,7 +26,7 @@ function Awards() {
               }}
             >
               <img
-                src="media/largestBroker.svg"
+                src="/media/largestBroker.svg"
                 className="img-fluid"
                 alt="award"
               />
@@ -127,7 +127,7 @@ function Awards() {
               }}
             >
               <img
-                src="media/pressLogos.png"
+                src="/media/pressLogos.png"
                 className="img-fluid"
                 alt="press"
                 style={{ filter: "brightness(0.9)" }}

@@ -3,7 +3,7 @@ import React from "react";
 function Hero() {
   const pricingCards = [
     {
-      image: "media/pricingEquity.svg",
+      image: "/media/pricingEquity.svg",
       title: "Free Equity Delivery",
       description:
         "All equity delivery investments (NSE & BSE) are absolutely free with ₹0 brokerage charges.",
@@ -11,7 +11,7 @@ function Hero() {
       icon: "fa-line-chart",
     },
     {
-      image: "media/intradayTrades.svg",
+      image: "/media/intradayTrades.svg",
       title: "Intraday & F&O Trades",
       description:
         "Flat ₹20 or 0.03% (whichever is lower) per executed order across equity, currency, and commodity.",
@@ -19,7 +19,7 @@ function Hero() {
       icon: "fa-bolt",
     },
     {
-      image: "media/pricingEquity.svg",
+      image: "/media/pricingEquity.svg",
       title: "Free Mutual Funds",
       description:
         "Invest in direct mutual funds with zero commission and hidden charges.",

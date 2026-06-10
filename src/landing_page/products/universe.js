@@ -3,42 +3,42 @@ import React from "react";
 function Universe() {
   const platforms = [
     {
-      logo: "media/smallcaseLogo.png",
+      logo: "/media/smallcaseLogo.png",
       title: "Smallcase",
       description: "Thematic investment platform",
       icon: "fa-chart-line",
       glow: "#ef4444",
     },
     {
-      logo: "media/streakLogo.png",
+      logo: "/media/streakLogo.png",
       title: "Streak",
       description: "Algo & strategy trading platform",
       icon: "fa-robot",
       glow: "#f43f5e",
     },
     {
-      logo: "media/sensibullLogo.svg",
+      logo: "/media/sensibullLogo.svg",
       title: "Sensibull",
       description: "Options trading simplified",
       icon: "fa-bolt",
       glow: "#ec4899",
     },
     {
-      logo: "media/zerodhaFundhouse.png",
+      logo: "/media/zerodhaFundhouse.png",
       title: "Fund House",
       description: "Direct mutual fund investments",
       icon: "fa-wallet",
       glow: "#06b6d4",
     },
     {
-      logo: "media/goldenpiLogo.png",
+      logo: "/media/goldenpiLogo.png",
       title: "GoldenPi",
       description: "Invest in bonds digitally",
       icon: "fa-coins",
       glow: "#f59e0b",
     },
     {
-      logo: "media/dittoLogo.png",
+      logo: "/media/dittoLogo.png",
       title: "Ditto",
       description: "Health & term insurance platform",
       icon: "fa-shield-heart",

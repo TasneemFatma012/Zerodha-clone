@@ -18,7 +18,7 @@ function ProductPage() {
 
       {/* PRODUCTS */}
       <LeftSection
-        imageURL="media/kite.png"
+        imageURL="/media/kite.png"
         productName="Kite"
         productDescription="Our ultra-fast flagship trading platform with real-time market data, advanced charting tools, seamless order execution, and a modern user experience across all devices."
         tryDemo="#"
@@ -28,14 +28,14 @@ function ProductPage() {
       />
 
       <RightSection
-        imageURL="media/console.png"
+        imageURL="/media/console.png"
         productName="Console"
         productDescription="A powerful dashboard to track investments, analyze portfolio performance, generate tax reports, and monitor your trading activity with deep insights."
         learnMore="#"
       />
 
       <LeftSection
-        imageURL="media/coin.png"
+        imageURL="/media/coin.png"
         productName="Coin"
         productDescription="Invest in direct mutual funds with zero commission, easy SIP management, and long-term wealth-building tools designed for modern investors."
         tryDemo="#"
@@ -45,14 +45,14 @@ function ProductPage() {
       />
 
       <RightSection
-        imageURL="media/kiteconnect.png"
+        imageURL="/media/kiteconnect.png"
         productName="Kite Connect API"
         productDescription="Build trading apps, automate strategies, and integrate market data using our fast, developer-friendly HTTP/JSON APIs trusted by fintech startups."
         learnMore="#"
       />
 
       <LeftSection
-        imageURL="media/varsity.png"
+        imageURL="/media/varsity.png"
         productName="Varsity Mobile"
         productDescription="Master stock market concepts with beautifully designed lessons, practical examples, quizzes, and bite-sized educational modules."
         tryDemo="#"

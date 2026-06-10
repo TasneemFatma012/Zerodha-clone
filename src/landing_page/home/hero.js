@@ -21,7 +21,7 @@ function Hero() {
         {/* HERO IMAGE */}
         <div className="mb-4">
           <img
-            src="media/homeHero.png"
+            src="/media/homeHero.png"
             alt="hero"
             style={{
               width: "100%",

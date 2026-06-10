@@ -28,7 +28,7 @@ function Education() {
               }}
             >
               <img
-                src="media/education.svg"
+                src="/media/education.svg"
                 alt="education"
                 className="img-fluid"
                 style={{

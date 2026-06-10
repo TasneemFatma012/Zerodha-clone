@@ -102,7 +102,7 @@ function Stats() {
               />
 
               <img
-                src="media/ecosystem.png"
+                src="/media/ecosystem.png"
                 alt="ecosystem"
                 className="img-fluid position-relative"
                 style={{ zIndex: 2 }}
