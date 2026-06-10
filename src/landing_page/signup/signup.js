@@ -4,6 +4,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 function Signup() {
+  const API = "https://zerodha-backend-z9ph.onrender.com";
   const navigate = useNavigate();
   const [step, setStep] = useState(1);
   const [form, setForm] = useState({
@@ -51,7 +52,7 @@ function Signup() {
   const handleSubmit = async () => {
   if (validateStep2()) {
     try {
-      const res = await axios.post("http://localhost:5000/users/signup", {
+      const res = await axios.post(`${API}/users/signup`, {
         fullName: form.fullName,
         email: form.email,
         phone: form.phone,

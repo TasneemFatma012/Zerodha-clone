@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function Login() {
+  const API = "https://zerodha-backend-z9ph.onrender.com";
   const navigate = useNavigate();
 
   const [form, setForm] = useState({
@@ -27,7 +28,7 @@ function Login() {
     try {
       setLoading(true);
 
-      const res = await axios.post("http://localhost:5000/users/login", {
+      const res = await axios.post(`${API}/users/login`, {
         email: form.email,
         password: form.password,
       });
