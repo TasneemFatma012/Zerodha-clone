@@ -22,7 +22,7 @@ function NavBar() {
           to="/"
         >
           <img
-            src="/media/logo.svg"
+            src="/media/nexora.png"
             alt="logo"
             style={{
               width: "38px",
@@ -39,7 +39,7 @@ function NavBar() {
               letterSpacing: "0.5px",
             }}
           >
-            Zerodha
+            Nexora
           </span>
         </Link>
 
