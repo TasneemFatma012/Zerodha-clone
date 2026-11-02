@@ -1,0 +1,90 @@
+require("dotenv").config();
+
+const express = require("express");
+const cors = require("cors");
+const mongoose = require("mongoose");
+
+
+const appsRoute = require("./routes/apps");
+const orderRoute = require("./routes/orders");
+const holdingRoute = require("./routes/holdings");
+const fundRoute = require("./routes/funds");
+const marketRoute = require("./routes/market");
+const kycRoute = require("./routes/kyc");
+const userRoute = require("./routes/users");
+const positionsRoute = require("./routes/positions");
+
+const PORT = process.env.PORT || 5000;
+
+const app = express();
+
+
+const allowedOrigins = [
+  "http://localhost:5173",
+  "http://localhost:5174",
+  "http://localhost:3000"
+];
+
+app.use(cors({
+  origin: function (origin, callback) {
+
+    if (!origin) {
+      return callback(null, true);
+    }
+
+    // localhost allow
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+
+    // Vercel deployments allow
+    if (origin.endsWith(".vercel.app")) {
+      return callback(null, true);
+    }
+
+    callback(new Error("Not allowed by CORS"));
+  },
+  credentials: true
+}));
+
+
+app.use(express.json());
+
+
+
+// routes
+
+app.use("/apps",appsRoute);
+
+app.use("/orders",orderRoute);
+
+app.use("/holdings", holdingRoute);
+app.use("/allHoldings", holdingRoute);
+
+app.use("/funds",fundRoute);
+
+app.use("/market",marketRoute);
+
+app.use("/kyc",kycRoute);
+
+app.use("/users",userRoute);
+
+app.use("/positions", positionsRoute);
+
+
+mongoose.connect(process.env.MONGO_URL)
+
+.then(()=>{
+
+console.log("MongoDB Connected");
+
+
+app.listen(PORT,()=>{
+
+console.log(`Server running ${PORT}`);
+
+});
+
+
+})
+.catch(err=>console.log(err));
