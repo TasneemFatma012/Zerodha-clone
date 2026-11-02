@@ -1,10 +1,10 @@
 # Nexora Trading Platform
 
-This repository contains the complete trading platform workspace with three main parts working together:
+This monorepo contains the complete trading platform workspace with three connected apps:
 
 - backend: Node.js + Express + MongoDB API
-- dashboard: React trading dashboard UI
-- frontend: additional frontend app / landing or client interface
+- dashboard: trading dashboard UI
+- frontend: marketing and auth landing app
 
 ## Project Structure
 
@@ -17,7 +17,8 @@ zerodha-clone/
 │   ├── schemas/
 │   ├── .env
 │   ├── index.js
-│   └── package.json
+│   ├── package.json
+│   └── README.md
 ├── dashboard/
 │   ├── src/
 │   ├── public/
@@ -27,63 +28,74 @@ zerodha-clone/
 ├── frontend/
 │   ├── src/
 │   ├── public/
+│   ├── .env
 │   ├── package.json
-│   └── README.md (if present)
+│   └── README.md
 ├── .gitignore
+├── package.json
+├── package-lock.json
 ├── README.md
-└── package.json (optional root script manager)
+└── node_modules/
 ```
 
-## How to run together
+## Start everything together
 
-### 1. Install dependencies
+From the root folder:
 
+```bash
+npm run dev
+```
+
+This runs:
+- backend on port 5000
+- dashboard on port 5173
+- frontend on port 3000
+
+## Start apps individually
+
+### Backend
 ```bash
 cd backend
 npm install
-
-cd ../dashboard
-npm install
-
-cd ../frontend
-npm install
-```
-
-### 2. Start backend
-
-```bash
-cd backend
 npm start
 ```
 
-### 3. Start dashboard
-
+### Dashboard
 ```bash
 cd dashboard
+npm install
 npm run dev
 ```
 
-### 4. Start frontend
-
+### Frontend
 ```bash
 cd frontend
-npm run dev
+npm install
+npm start
+```
+
+## Environment variables
+
+### Backend
+```bash
+PORT=5000
+MONGO_URL=mongodb+srv://<username>:<password>@cluster.mongodb.net/<database>
+```
+
+### Dashboard
+```bash
+VITE_API_URL=http://localhost:5000
+```
+
+### Frontend
+```bash
+REACT_APP_DASHBOARD_URL=http://localhost:5173
 ```
 
 ## Notes
+- Frontend login/signup redirects the user into the dashboard app.
+- Dashboard depends on backend APIs for holdings, orders, positions, funds, and user auth.
+- Backend must be connected to MongoDB for full functionality.
 
-- The backend provides API endpoints used by the dashboard/frontends.
-- Make sure all environment variables are configured inside each app's `.env` file.
-- This repository is now set up as a single monorepo workspace so you can work on all three apps together.
-
-## Recommended next step
-
-If you want, we can also add a root `package.json` with scripts like:
-
-```bash
-npm run backend
-npm run dashboard
-npm run frontend
-```
-
-so that everything can be started together from one command.
+## License
+For educational and demo use.

@@ -16,6 +16,7 @@ import SupportPage from "./landing_page/support/supportpage";
 import NotFound from "./landing_page/NotFound";
 import Navbar from "./landing_page/navbar";
 import Footer from "./landing_page/footer";
+import DashboardRedirect from "./landing_page/DashboardRedirect";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -25,6 +26,7 @@ root.render(
       <Route path="/" element={<HomePage />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/dashboard" element={<DashboardRedirect />} />
       <Route path="/about" element={<AboutPage />} />
       <Route path="/products" element={<ProductPage />} />
       <Route path="/pricing" element={<PricingPage />} />

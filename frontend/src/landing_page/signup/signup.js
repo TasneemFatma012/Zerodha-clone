@@ -63,6 +63,11 @@ function Signup() {
 
       console.log(res.data);
 
+      localStorage.setItem("demoUser", JSON.stringify({
+        name: form.fullName,
+        email: form.email,
+      }));
+
       setSubmitted(true);
 
       // redirect to dashboard after 2 sec
@@ -70,7 +75,13 @@ function Signup() {
         navigate("/dashboard");
       }, 2000);
     } catch (err) {
-      alert(err.response?.data?.message || "Signup failed");
+      console.error("Signup failed:", err);
+      localStorage.setItem("demoUser", JSON.stringify({
+        name: form.fullName,
+        email: form.email,
+      }));
+      alert("Backend is unavailable right now. Demo mode is enabled and you are being redirected to the dashboard.");
+      navigate("/dashboard");
     }
   }
 };
